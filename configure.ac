@@ -1,10 +1,10 @@
 dnl -*- Autoconf -*-
 
-AC_INIT([Guest], [0.0.1],
+AC_INIT([Guest], [0.0.2],
 	[mitchellschmeisser@librem.one],
 	[guest],
 	[https://github.com/paperclip4465/guix-zephyr])
-AC_SUBST(HVERSION, "0.0.1")
+AC_SUBST(HVERSION, "0.0.2")
 AC_SUBST(AUTHOR, "Mitchell Schmeisser")
 AC_SUBST(COPYRIGHT, "'(2023)")
 AC_SUBST(LICENSE, gpl3+)
