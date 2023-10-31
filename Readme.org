@@ -1,0 +1,27 @@
+* Guest (Guile + West) v0.0.1
+
+Guest is a command line utility for working with Guix based Zephyr
+projects.  Using ~guix build~ in the CI is all well in good but during
+development spawning an isolated environment is a bit
+cumbersome. Speaking of cumbersome...
+
+Passing ~$ZEPHYR_MODULES~ to CMake when said modules are located in
+the store is almost impossible.  Zephyr's CMake scripts call out to
+West, when available, to provide the list of locations to include and
+that is all Guest does at the moment.
+
+When no arguments are provided ~guest list~ searches the path
+variable ~ZEPHYR_MODULES_PATH~.
+
+#+BEGIN_SRC sh
+guest list [directories]
+#+END_SRC
+
+** Building
+
+Guest is built using the GNU build system.
+
+#+BEGIN_SRC sh
+  guix shell -D -f guix.scm
+  ./configure && make && make install
+#+END_SRC
