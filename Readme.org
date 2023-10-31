@@ -10,8 +10,10 @@ the store is almost impossible.  Zephyr's CMake scripts call out to
 West, when available, to provide the list of locations to include and
 that is all Guest does at the moment.
 
-When no arguments are provided ~guest list~ searches the path
-variable ~ZEPHYR_MODULES_PATH~.
+When no arguments are provided ~guest list~ searches the environment
+variable ~ZEPHYR_MODULES_PATH~. Optionally a list of directories can be
+provided which will be searched /in addition to/ the directories specified
+in ~ZEPHYR_MODULES_PATH~.
 
 #+BEGIN_SRC sh
 guest list [directories]
